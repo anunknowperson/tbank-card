@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <header>
-        <div>
-            Сергей Киселев (React-разработчик)
+        <div class="navigation-container">
+            <a href="#start-section">В начало</a>
+            <a href="#portfolio-section">Мои работы</a>
         </div>
-        <button class="contact-me-button">
-            Связаться
-        </button>
+        <div class="navigation-right-bar">
+            <button class="theme-toogle">
+                тема
+            </button>
+            <button class="contact-me-button">
+                Связаться
+            </button>
+        </div>
+
     </header>
 
-    <section class="landing-section">
+    <section id="start-section" class="landing-section">
         <div class="hello-block">
             <h1>
                 Привет, Я - Frontend разработчик.
@@ -30,8 +38,8 @@
         <div class="main-info-block">
             <div class="info-grid">
                 <div class="info-item location">
-                    
-                    <span>Санкт-Петербург</span>
+
+                    <span>Санкт-Петербург<br><br>Дата рождения: 17.10.2005<br><br>Формат работы: не важен</span>
                 </div>
 
                 <div class="info-item photo">
@@ -40,23 +48,61 @@
 
                 <div class="info-item education">
                     <span>Навыки: JS, TS, HTML, CSS, React, Next.js<br><br>Образование: СПбГУ, 3 курс</span>
-                    <span></span>
+
                 </div>
 
                 <div class="info-item social-links">
-                    <a href="https://github.com/anunknowperson" title="GitHub" >
-                        <img src="github.png" alt="Github Logo" >
+                    <a href="https://github.com/anunknowperson" title="GitHub">
+                        <img src="github.png" alt="Github Logo">
                     </a>
                     <a href="https://t.me/yourusername" title="Telegram">
-                        
+
                     </a>
                     <a href="mailto:kiselev.sereja@gmal.com" title="Email">
-                        
+
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="portfolio-section" class="portfolio-section">
+        <h2>Последние проекты которые я реализовывал:</h2>
+
+        <div class="projects-container">
+            <div class="project-card">
+                <h3 class="project-title">Система сбора отчётов для астрономов</h3>
+                <p class="project-description">
+                    Full-stack панель управления. Агрономы присылают отчёты которые автоматически парсятся при помощи
+                    локальной LLM и загружаются на диск, в Google Documents и отображаются во фронтенде.<br>
+                    Стек: Next.js, React, DaisyUI, Tailwind, i18n, next-auth, next api routes, MongoDB, python, fast
+                    api, redis.
+
+                </p>
+                <div class="project-images">
+                    <img class="project-image" src="app1_screenshot1.jpg" alt="Проект 1 - Изображение 1">
+                    <img class="project-image" src="app1_screenshot2.jpg" alt="Проект 1 - Изображение 2">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Приложение для изучения иностранного языка</h3>
+                <p class="project-description">
+                    Полноценное приложение для изучения японского языка которым пользуются ученики уже больше года.
+                    Посмотреть можно тут: <a href="http://shirokani.ru:3540/">http://shirokani.ru:3540/</a><br>
+                    Стек: Next.js, React, Maintine, next-auth, next api routes, MongoDB
+                </p>
+                <div class="project-images">
+                    <img class="project-image" src="app2_screenshoot1.png" alt="Проект 2 - Изображение 1">
+                    <img class="project-image" src="app2_screenshoot2.png" alt="Проект 2 - Изображение 2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center;">
+        Тут футер будет тип, C в кружочке я
+    </footer>
 </body>
 
 </html>
